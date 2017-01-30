@@ -31,6 +31,8 @@
     "live-server": "^1.2.0",
     "nconf": "^0.8.4",
     "npm-run-all": "^4.0.0",
+    "pg": "^6.1.2",
+    "pg-hstore": "^2.3.2",
     "watchify": "^3.7.0"
   },
   "dependencies": {
