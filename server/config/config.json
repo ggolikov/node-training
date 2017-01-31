@@ -1,6 +1,0 @@
-{
-    "port" : 9000,
-    "database" : "test",
-    "username" : "postgres",
-    "password" : "accept"
-}

@@ -17,26 +17,31 @@
     ]
   },
   "scripts": {
-    "watch": "watchify -v -d web/js/app.js -t babelify -o web/js/bundle.js",
-    "server": "live-server --port=3002 --host=localhost --watch",
-    "start": "npm-run-all --parallel watch server"
+    "start": "nodemon src/server.js --exec babel-node --presets es2015,stage-2"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
-    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-es2015": "^6.22.0",
     "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-2": "^6.22.0",
     "babelify": "^7.3.0",
     "browserify": "^13.1.1",
     "express": "^4.14.0",
     "live-server": "^1.2.0",
     "nconf": "^0.8.4",
+    "node-jsx": "^0.13.3",
+    "nodemon": "^1.11.0",
     "npm-run-all": "^4.0.0",
     "pg": "^6.1.2",
     "pg-hstore": "^2.3.2",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-hot-loader": "^1.3.0",
     "watchify": "^3.7.0"
   },
   "dependencies": {
     "pg-promise": "^5.5.4",
+    "react-bootstrap": "^0.30.7",
     "sequelize": "^3.30.0"
   }
 }
