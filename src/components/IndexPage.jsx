@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 
 class IndexPage extends Component {
     constructor(props) {
+        console.log(props);
         super(props);
         this.state = {
             name: props.name,
-            state: props.state
+            place: props.place
         };
     }
 
