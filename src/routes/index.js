@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDom from 'react-dom/server';
 import sequelize from '../orm';
 import models from '../models';
-import IndexPage from '../components/IndexPage';
+import IndexList from '../components/IndexList';
 
 const bodyParser = require('body-parser');
 
@@ -13,9 +13,9 @@ router.get('/', (req, res) => {
     sequelize
         .authenticate()
         .then(function(err) {
-            models.User.findAll().then(users => {
-                let first = users[0].dataValues,
-                    html = ReactDom.renderToString(<IndexPage name={first.name} place={first.place} />);
+            models.User.findAll().then(teams => {
+                // console.log(teams);
+                let html = ReactDom.renderToString(<IndexList list={teams} />);
 
                 return res.end(renderHTML(html));
             });
